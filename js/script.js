@@ -1,34 +1,38 @@
 let heroes = [
-  ["Axe", "Tank"],
-  ["Crystal Maiden", "Support"],
+  ['https://freepngimg.com/thumb/categories/2900.png', 'ЧАЙКА', '1970'],
+  ['https://freepngimg.com/thumb/categories/2897.png', 'LAMBORGINI', '2012'],
 ];
 
 // Add new elements
-let newElement = document.createElement("div");
+let newElement = document.createElement('div');
 document.body.appendChild(newElement);
 
 // Function show cards
-function displayHeroes() {
-  let heroesContainer = document.getElementById("heroesContainer");
-  heroesContainer.innerHTML = "";
+function displayCar() {
+  let carContainer = document.getElementById('carContainer');
+  carContainer.innerHTML = '';
   for (let i = 0; i < heroes.length; i++) {
-    let heroDiv = document.createElement("div");
-    heroDiv.innerHTML = `<h3>${heroes[i][0]}</h3><p>${heroes[i][1]}</p>`;
-    heroesContainer.appendChild(heroDiv);
+    let heroDiv = document.createElement('div');
+    heroDiv.classList.add('card');
+    heroDiv.innerHTML = `<img src=${heroes[i][0]}><h3>${heroes[i][1]}</h3><p>${heroes[i][2]}</p>`;
+    carContainer.appendChild(heroDiv);
   }
 }
-displayHeroes();
 
-// Fnction add card
+displayCar();
+
+// Function add card
 function addHero() {
-  let nameInput = document.getElementById("heroName");
-  let classInput = document.getElementById("heroClass");
-  let newHero = [nameInput.value, classInput.value];
-  heroes.push(newHero);
-  displayHeroes();
+  let imageInput = document.getElementById('imageInput');
+  let nameInput = document.getElementById('carName');
+  let classInput = document.getElementById('carYear');
+  let newCar = [imageInput.value, nameInput.value, classInput.value];
+  heroes.push(newCar);
+  displayCar();
 
-  nameInput.value = "";
-  classInput.value = "";
+  imageInput.value = '';
+  nameInput.value = '';
+  classInput.value = '';
 }
 
-document.getElementById("addButton").addEventListener("click", addHero);
+document.getElementById('addButton').addEventListener('click', addHero);
