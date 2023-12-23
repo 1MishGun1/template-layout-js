@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(14, 14, 14);
+}
+
+.header,
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.logo {
+  font-size: 28px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 1px solid white;
+  width: fit-content;
+  padding: 10px 15px;
+}
+
+.main {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  gap: 20px;
+}
+
+.inputs input {
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  outline: none;
+  transition: all 0.5s;
+  color: white;
+}
+
+.inputs input::placeholder {
+  color: white;
+  font-size: 20px;
+}
+
+.inputs input:focus {
+  height: 80px;
+  border-bottom: 2px solid rgb(0, 196, 0);
+}
+
+#addButton {
+  height: 50px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+
+#addButton:hover {
+  background-color: white;
+  color: black;
+}
+
+#carContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  gap: 20px;
+}
+
+.card {
+  border: 2px solid white;
+  color: white;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
