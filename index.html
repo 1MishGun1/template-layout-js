@@ -13,12 +13,31 @@
     <main class="main">
       <div id="container">
         <div id="carContainer"></div>
-        <div class="inputs">
-          <input type="text" id="imageInput" placeholder="Ссылка на картинку" />
-          <input type="text" id="carName" placeholder="Название машины" />
-          <input type="text" id="carYear" placeholder="Год выпуска" />
+        <form name="addCar" class="inputs">
+          <input
+            type="text"
+            name="imageInput"
+            id="imageInput"
+            required
+            placeholder="Ссылка на картинку"
+          />
+          <input
+            type="text"
+            name="carName"
+            id="carName"
+            required
+            placeholder="Название машины"
+          />
+          <input
+            type="text"
+            name="carYear"
+            id="carYear"
+            required
+            placeholder="Год выпуска"
+          />
           <button id="addButton">Добавить</button>
-        </div>
+          <p id="errorText"></p>
+        </form>
       </div>
     </main>
     <footer class="footer">
