@@ -75,6 +75,10 @@ body {
   color: black;
 }
 
+#addButton:disabled {
+  opacity: 0.6s;
+}
+
 #carContainer {
   display: grid;
   grid-template-columns: repeat(3, 350px);
